@@ -25,15 +25,23 @@ html{
     line-height: 22px;
     color: #828282;
     text-decoration: none;
-    padding-top: 32px;
-    padding-bottom: 31px;
-    max-width: 188.6px;
+    padding: 32px 0px 31px 0px;
+    max-width: 100px;
     width: 100%;
+    transition: 0.3s;
 }
 .link_header:hover{
     color: black;
     font-weight: bold;
     transition: 0.3s ease;
+}
+.link_header:nth-child(1){
+    display: flex;
+}
+.link_header:nth-child(5){
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 /* promo */
 .promo_block{
@@ -60,14 +68,38 @@ html{
     color: #070707;
     padding-top: 40px;
 }
+.lang_promo_block{
+    transform: rotate(-90deg);
+   display: flex;
+}
 .lang_promo{
     font-size: 16px;
     line-height: 20px;
     color: #828282;
-    transform: rotate(-90deg);
-    padding-right: 10px;
-    padding-top: 60px;
+    padding: 0px 7px 0px 7px;
+    margin-top: 55px;
+    position: relative;
+    width: 40px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    transition: 0.3s;
 }
+.lang_promo:hover{
+    background-color: #000;
+    color: #fff;
+}
+.lang_promo:nth-child(1)::before{
+    content: '';
+    position: absolute;
+    width: 19px;
+    height: 1px;
+    top: 9px;
+    right: -9px;
+    background-color: #000;
+    transform: rotate(-90deg);
+}
+
 .img_promo{
     max-width: 943.61px;
     width: 100%;
@@ -287,6 +319,7 @@ html{
     font-size: 18px;
     line-height: 22px; 
     color: #FFFFFF;
+    transition: 0.3s;
 }
 .button_cont:hover{
     background-color: white;
